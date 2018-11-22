@@ -72,7 +72,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
                 <span class="hidden-xs">
-                  User Name</span>
+                  Admin</span>
               </a>
               <ul class="dropdown-menu">
                 <!-- User image -->
@@ -80,7 +80,7 @@
                   <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                   <p>
-                    User Name
+                    Admin
                     <small>
                       Admin</small>
                   </p>
@@ -125,7 +125,7 @@
           </div>
           <div class="pull-left info">
             <p>
-              User Name
+              Admin
             </p>
             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
           </div>
@@ -199,14 +199,16 @@
               </div>
               <!-- /.box-header -->
               <div class="box-body">
-                <table id="productTable" class="table table-bordered table-striped nowrap" cellspacing="0" width="100%">
+                <table id="table" class="table table-bordered table-striped nowrap" cellspacing="0" width="100%">
                   <thead>
                     <tr>
-                      <th>ID</th>
                       <th>Product</th>
                       <th>Description</th>
                       <th>Price</th>
+                      <th>Rating</th>
                       <th>Stock</th>
+                      <th>Image</th>
+                      <th>Features</th>
                       <th>Action</th>
                     </tr>
                   </thead>

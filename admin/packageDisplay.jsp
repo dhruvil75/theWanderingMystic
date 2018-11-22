@@ -26,6 +26,7 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
   <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.16/b-1.5.1/b-html5-1.5.1/b-print-1.5.1/r-2.2.1/datatables.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -36,12 +37,21 @@
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+
   <script src="rest.js"></script>
   <script>
     $(document).ready(function(){
       getPackages();
     });
   </script>
+  <style>
+    table {
+    table-layout: auto !important; 
+    border-collapse: collapse !important;
+    width: 100% !important;
+    }
+</style>
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
@@ -72,7 +82,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
                 <span class="hidden-xs">
-                  User Name</span>
+                  Admin</span>
               </a>
               <ul class="dropdown-menu">
                 <!-- User image -->
@@ -80,7 +90,7 @@
                   <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                   <p>
-                    User Name
+                    Admin
                     <small>
                       Admin</small>
                   </p>
@@ -107,8 +117,8 @@
             </li>
             <!-- Control Sidebar Toggle Button -->
             <!-- <li>
-            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-          </li> -->
+                <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+              </li> -->
           </ul>
         </div>
 
@@ -125,7 +135,7 @@
           </div>
           <div class="pull-left info">
             <p>
-              User Name
+              Admin
             </p>
             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
           </div>
@@ -197,15 +207,18 @@
                 <a href="packageAdd.jsp"><button type="button" class="btn btn-default pull-right" name="button">Add New</button></a>
               </div>
               <!-- /.box-header -->
-              <div class="box-body">
-                <table id="example1" class="table table-bordered table-striped">
+              <div class="box-body" style="overflow-x:auto">
+                <table id="table" class="table table-bordered table-striped">
                   <thead>
                     <tr>
                       <th>Package Name</th>
+                      <th>Description</th>
                       <th>Package Price</th>
-                      <th>Category Name</th>
-                      <th>View/Update</th>
-                      <th>Delete</th>
+                      <th>Days/Nights</th>
+                      <th>Accomodation</th>
+                      <th>Itinerary</th>
+                      <th>Image</th>
+                      <th>Actions</th>
                     </tr>
                   </thead>
                   <tbody>

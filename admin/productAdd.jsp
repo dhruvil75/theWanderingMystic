@@ -57,7 +57,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
                 <span class="hidden-xs">
-                  User Name</span>
+                  Admin</span>
               </a>
               <ul class="dropdown-menu">
                 <!-- User image -->
@@ -65,7 +65,7 @@
                   <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                   <p>
-                    User Name
+                    Admin
                     <small>
                       Admin</small>
                   </p>
@@ -110,7 +110,7 @@
           </div>
           <div class="pull-left info">
             <p>
-              User Name
+              Admin
             </p>
             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
           </div>
@@ -179,43 +179,69 @@
               </div>
               <!-- /.box-header -->
               <!-- form start -->
-              <form role="form" onsubmit="addProduct()" id="productAdd" method="post" enctype="multipart/form-data">
+              <form role="form" id="productAdd" enctype="multipart/form-data">
                 <div class="box-body">
                   <div class="form-group">
                     <label for="prod_name">Product Name</label>
-                    <input type="text" class="form-control" name="prod_name" id="prod_name" placeholder="Enter product name"
+                    <input type="text" class="form-control" name="name" id="prod_name" placeholder="Enter product name"
                       required>
                   </div>
                   <div class="form-group">
                     <label>Product Description</label>
-                    <textarea class="form-control" rows="3" name="prod_desc" id="prod_desc" placeholder="Enter product description"
+                    <textarea class="form-control" rows="3" name="description" id="prod_desc" placeholder="Enter product description"
                       style="resize:none;"></textarea>
                   </div>
                   <div class="form-group">
                     <label for="prod_price">Product Price</label>
-                    <input type="number" class="form-control" name="prod_price" id="prod_price" placeholder="Enter product price"
+                    <input type="number" class="form-control" name="price" id="prod_price" placeholder="Enter product price"
                       min="0" required>
                   </div>
                   <div class="form-group">
+                    <label for="prod_price">Rating</label>
+                    <input type="number" class="form-control" name="rating" id="prod_price" placeholder="Enter rating"
+                      max="5" min="0" required>
+                  </div>
+                  <div class="form-group">
                     <label for="prod_stock">Product Stock</label>
-                    <input type="number" class="form-control" name="prod_stock" id="prod_stock" placeholder="Quantity in stock"
+                    <input type="number" class="form-control" name="stock" id="prod_stock" placeholder="Quantity in stock"
                       min="0">
                   </div>
                   <div class="form-group">
                     <label for="prod_image">Featured Image</label>
-                    <input type="text" class="form-control" name="prod_image" id="prod_image" placeholder="Enter image URL"
+                    <input type="text" class="form-control" name="imageUrl" id="prod_image" placeholder="Enter image URL"
                       required>
                   </div>
                   <div class="form-group">
-                    <label for="more_images">More Images</label>
-                    <textarea type="text" class="form-control" name="more_images" id="more_images" placeholder="Enter image URLs"></textarea>
+                    <label for="title">Image 1</label>
+                    <input type="text" class="form-control" name="image" id="package_name" placeholder="Image URL"
+                      required>
+                  </div>
+                  <div class="form-group">
+                    <label for="title">Image 2</label>
+                    <input type="text" class="form-control" name="image" id="package_name" placeholder="Image URL"
+                      required>
+                  </div>
+                  <div class="form-group">
+                    <label for="title">Image 3</label>
+                    <input type="text" class="form-control" name="image" id="package_name" placeholder="Image URL"
+                      required>
+                  </div>
+                  <div class="form-group">
+                    <label for="title">Image 4</label>
+                    <input type="text" class="form-control" name="image" id="package_name" placeholder="Image URL"
+                      required>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="more_images">Features</label>
+                    <textarea type="text" class="form-control" name="features" id="features" placeholder="Enter comma-separated features"></textarea>
                   </div>
                 </div>
 
                 <!-- /.box-body -->
 
                 <div class="box-footer">
-                  <input type="submit" name="submit" value="Submit" class="btn btn-primary pull-right">
+                  <input type="button" onclick="addProduct()" name="submit" value="Submit" class="btn btn-primary pull-right">
                 </div>
               </form>
             </div>

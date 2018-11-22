@@ -22,20 +22,14 @@
   <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
 
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.16/r-2.2.1/datatables.min.css" />
-
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
   <script src="rest.js"></script>
   <script>
     $(document).ready(function () {
-      getInquiries();
+      getInquiry();
     });
   </script>
 </head>
@@ -67,7 +61,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
                 <span class="hidden-xs">
-                  User Name</span>
+                  Admin</span>
               </a>
               <ul class="dropdown-menu">
                 <!-- User image -->
@@ -75,7 +69,7 @@
                   <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                   <p>
-                    User Name
+                    Admin
                     <small>
                       Admin</small>
                   </p>
@@ -120,7 +114,7 @@
           </div>
           <div class="pull-left info">
             <p>
-              User Name
+              Admin
             </p>
             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
           </div>
@@ -193,15 +187,16 @@
               </div>
               <!-- /.box-header -->
               <div class="box-body">
-                <table id="example1" class="table table-bordered table-striped nowrap" cellspacing="0" width="100%">
+                <table id="table" class="table table-bordered table-striped nowrap" cellspacing="0" width="100%">
                   <thead>
                     <tr>
                       <th>Name</th>
                       <th>Number</th>
                       <th>Email</th>
-                      <th>City</th>
-                      <th>Comment</th>
-                      <th>View/Update</th>
+                      <th>Destination</th>
+                      <th>Message</th>
+                      <th>Number of People</th>
+                      <th>Date of Travel</th>
                       <th>Action</th>
                     </tr>
                   </thead>
@@ -305,32 +300,6 @@
     })
   </script>
 
-  <script>
-    $('.update-class').on('change', function (e) {
-      var optionSelected = $("option:selected", this);
-      var valueSelected = this.value;
-      var inquiry_id = $(this).attr('id');
-      var div = $(this).siblings('.hidden');
-      var table = $('#example1').DataTable();
-
-      //console.log(valueSelected);
-      $.ajax({
-        url: "updateInTable.jsp?table=inquiry&id=" + inquiry_id + "&status=" + valueSelected,
-        cache: false,
-        type: 'GET',
-        dataType: 'json',
-        success: function (result) {
-          if (result.success) {
-            console.log(div.html());
-            div.html(valueSelected);
-            console.log(div.html());
-            location.reload();
-            //table.order([[6,'asc']]).draw(false);
-          }
-        }
-      });
-    });
-  </script>
 
 </body>
 

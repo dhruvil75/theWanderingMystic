@@ -24,7 +24,7 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
             <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
             <span class="hidden-xs">
-              User Name</span>
+              Admin</span>
           </a>
           <ul class="dropdown-menu">
             <!-- User image -->
@@ -32,7 +32,7 @@
               <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
               <p>
-                User Name
+                Admin
                 <small>
                   Admin</small>
               </p>

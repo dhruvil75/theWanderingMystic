@@ -38,26 +38,19 @@
     <div class="login-box-body">
       <p class="login-box-msg">Sign in</p>
 
-      <form role="form" method="post">
+      <form id="signIn" role="form">
         <div class="form-group has-feedback">
-          <input type="email" class="form-control" placeholder="Email" name="id">
+          <input type="email" class="form-control" placeholder="Email" name="email">
           <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
         </div>
         <div class="form-group has-feedback">
-          <input type="password" class="form-control" placeholder="Password" name="pwd">
+          <input type="password" class="form-control" placeholder="Password" name="password">
           <span class="glyphicon glyphicon-lock form-control-feedback"></span>
         </div>
         <div class="row">
-          <!--  <div class="col-xs-8">
-          <div class="checkbox icheck">
-            <label>
-              <input type="checkbox"> Remember Me
-            </label>
-          </div>
-        </div> -->
           <!-- /.col -->
           <div class="col-xs-12">
-            <button type="submit" class="btn btn-primary btn-flat center-block" name="login">Sign In</button>
+            <button type="button" onclick="signIn()" class="btn btn-primary btn-flat center-block" name="login">Sign In</button>
           </div>
           <!-- /.col -->
         </div>
